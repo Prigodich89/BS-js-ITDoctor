@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-xxl-5">
+            <div class="goods-box" id="goods">
+                <div class="menu">
+                    <input type="text" placeholder="Поиск" class="search">
+                    <button class="add btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">&#10010;</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="goods table mt-3" id="table1">
+                        <thead>
+                            <tr class="table-primary align-middle">
+                                <th data-type="number">№</th>
+                                <th data-type="string">Название</th>
+                                <th data-type="number">Цена, &#8381</th>
+                                <th data-type="number">Количество</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-xxl-7">
+            <div class="price-box">
+                <div class="menu">
+                    <div class="price-title">Итого: <span class="price-result">0 &#8381;</span></div>
+                </div>
+                <div class="table-responsive">
+                    <table class="prict table mt-3" id="table2">
+                        <thead>
+                            <tr class="table-primary align-middle">
+                                <th>№</th>
+                                <th data-type="string">Название</th>
+                                <th data-type="number">Цена/ш, &#8381;</th>
+                                <th data-type="number">Количество</th>
+                                <th>Скидка, %</th>
+                                <th data-type="number">Цена, &#8381;</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cart">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить товар</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+      <label for="good-name" class="form-label">Название товара</label>
+      <input type="text" class="form-control mb-3" id="good-name" maxlength="40">
+      <label for="good-price" class="form-label">Цена</label>
+      <input type="text" class="form-control mb-3" id="good-price">
+      <label for="good-count" class="form-label">Количество</label>
+      <input type="text" class="form-control mb-3" id="good-count" min="1" value="1">
+      <button type="submit" class="btn btn-success">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/cdn.jsdelivr.net_npm_sweetalert2@11.7.22_dist_sweetalert2.all.min.js"></script>
+    <script src="js/raw.githubusercontent.com_javve_list.js_v2.3.1_dist_list.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
